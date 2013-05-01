@@ -1,0 +1,8 @@
+wikipathways-go-classification/input
+wikipathways-go-classification/output
+wikipathways-go-classification/denom
+wikipathways-go-classification/bin
+wikipathways-go-classification/derby.log
+*.class
+.metadata/
+wikipathways-go-classification/.*
