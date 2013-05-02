@@ -2,6 +2,9 @@ wikipathways-go-classification/input
 wikipathways-go-classification/output
 wikipathways-go-classification/denom
 wikipathways-go-classification/bin
+wikipathways-go-classification/org.wikipathways.go.classification.jar
+wikipathways-go-classification/build
+wikipathways-go-classification/resources
 wikipathways-go-classification/derby.log
 *.class
 .metadata/

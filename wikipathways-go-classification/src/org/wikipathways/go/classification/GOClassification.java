@@ -30,7 +30,7 @@ public class GOClassification {
 			// set up BridgeDb connection 
 			// TODO: remove hard link to mapping db
 			Class.forName("org.bridgedb.rdb.IDMapperRdb");
-			IDMapper mapper = BridgeDb.connect("idmapper-pgdb:/home/mku/PathVisio-Data/gene-databases/Hs_Derby_20120602.bridge");
+			IDMapper mapper = BridgeDb.connect("idmapper-pgdb:resources/Hs_Derby_20120602.bridge");
 			
 			new File("input").mkdir();
 			new File("output").mkdir();
