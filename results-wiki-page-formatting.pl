@@ -31,22 +31,10 @@ foreach my $DIR (glob("$dir/*.txt"))
                   for (my $i = 2; $i <= $l-2 ; $i++) {
                        $name = $name . " " . $values[$i];
                    }
-                   
-                  print $pwId .  "\t" . $name . "\t" .  $genecount . "\n" . $link . "\n";
                   
                   print $OUTPUT "=== " . $name . " ===\n\n";
                   print $OUTPUT $genecount . " genes, [$link pathway] \n\n";
                   print $OUTPUT "||'''GO term'''||'''GO ID'''||'''changed'''||'''total'''||'''zcore'''||'''weighted'''||\n";
-#=== Glutathione metabolism ===
-
-#20 genes[[BR]]
-#link
-
-#||glutathione metabolic process||GO:0006749||15||37||305.56288314231733||[link link]||
-	 
-
-#----
-                  
            }
            if($count > 2) {
                 if($countGO < 15) {
@@ -55,16 +43,11 @@ foreach my $DIR (glob("$dir/*.txt"))
                  
                     my @values = split('\t', $line);
                     my $goid = $values[1];
-                    #$goid =~ tr/:/_/;
-                    
-                    my $link =  "http://purl.obolibrary.org/obo/" . $goid;
                     my $term = $values[0];
                     my $changed  = $values[2];
                     my $total = $values[4];
                     my $weightedzscore = substr($values[6], 0, 5);
                     my $zscore = substr($values[5], 0, 5);
-                    print $term . "\t" . $changed . "\t" . $total . "\t" . $weightedzscore . "\n";
-                    print $link . "\n";
                     if($total < 2000) {
                          print $OUTPUT "||$term||$goid||$changed||$total||$zscore||$weightedzscore||\n";
                            $countGO++;
